@@ -722,7 +722,7 @@ body{
 /* Use apenas a chave PUBLICÁVEL (sb_publishable_). Nunca use sb_secret_. */
 const SUPABASE_URL="https://tohgvkvkvajqxhtvbija.supabase.co";
 const SUPABASE_ANON_KEY="sb_publishable_ZLue4j1oo6ULkFIWVhkwNQ_iLkQHgah";
-const ONLINE_WORKSPACE="br-flecha-financeiro";
+const ONLINE_WORKSPACE="dane-se-financeiro";
 let cloudDb=null,adminSession=null,cloudChannel=null,cloudReady=false;
 const MONTHS=[
   "Janeiro","Fevereiro","Março","Abril","Maio","Junho",
@@ -1331,7 +1331,7 @@ function loadData(){
     try{
       const saved=JSON.parse(
         localStorage.getItem(
-          `br-flecha-dashboard-${key}-v1`
+          `dane-se-dashboard-${key}-v10`
         )
       );
 
@@ -1351,7 +1351,7 @@ function loadData(){
 
 function saveData(key){
   localStorage.setItem(
-    `br-flecha-dashboard-${key}-v1`,
+    `dane-se-dashboard-${key}-v10`,
     JSON.stringify({
       records:state.data[key],
       updated:state.updated[key],
@@ -4396,7 +4396,7 @@ async function clearCurrentData(){
   }
 
   localStorage.removeItem(
-    `br-flecha-dashboard-${state.source}-v1`
+    `dane-se-dashboard-${state.source}-v10`
   );
 
   state.data[state.source]=null;
